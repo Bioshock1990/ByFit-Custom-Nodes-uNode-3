@@ -1,0 +1,22 @@
+# Игнорировать ВСЁ в проекте (включая корень и Assets)
+*
+!.gitignore
+
+# Разрешить ТОЛЬКО папку "ByFit Custom nodes" и её содержимое
+!Assets/
+Assets/*
+!"Assets/ByFit Custom nodes/"
+!"Assets/ByFit Custom nodes/**/*"
+
+# Стандартные игнорируемые папки/файлы Unity (на всякий случай)
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Pp]roject[Ss]ettings/
+*.csproj
+*.sln
+*.unitypackage
