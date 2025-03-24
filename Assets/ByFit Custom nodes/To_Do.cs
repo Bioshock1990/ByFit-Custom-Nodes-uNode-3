@@ -46,7 +46,7 @@ namespace MaxyGames.UNode.Nodes {
             if (roundedSprite != null) {
                 panel.sprite = roundedSprite;
                 panel.type = Image.Type.Sliced;
-                panel.pixelsPerUnitMultiplier = 2.7f;
+                panel.pixelsPerUnitMultiplier = 2.4f;
             }
 
             // Создаем текст внутри панели
@@ -97,11 +97,11 @@ namespace MaxyGames.UNode.Nodes {
             }
 
             // Запускаем анимацию
-            panelObj.AddComponent<MonoBehaviourHelper>().StartCoroutine(AnimatePanel(panelRect, Time_Panel));
+            panelObj.AddComponent<MonoBehaviourHelper>().StartCoroutine(AnimatePanel(panelRect, Time_Panel, canvas));
         }
 
         // Корутинa для анимации
-        private static IEnumerator AnimatePanel(RectTransform panelRect, float duration) {
+        private static IEnumerator AnimatePanel(RectTransform panelRect, float duration, Canvas canvas) {
             float time = 0f;
             Vector2 startPos = panelRect.anchoredPosition; // Начальная позиция ниже экрана
             Vector2 endPos = new Vector2(0, 50); // Финальная позиция
@@ -126,8 +126,11 @@ namespace MaxyGames.UNode.Nodes {
             }
             panelRect.anchoredPosition = startPos;
 
-            // Уничтожаем объект после анимации
+            // Уничтожаем панель
             GameObject.Destroy(panelRect.gameObject);
+
+            // Удаляем канвас после того, как панель исчезнет
+            GameObject.Destroy(canvas.gameObject);
         }
     }
 
