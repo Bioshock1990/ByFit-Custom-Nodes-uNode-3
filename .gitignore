@@ -20,8 +20,3 @@
 *.csproj
 *.sln
 *.unitypackage
-uNode.Generated/
-uNode.Generated.meta
-Project.meta
-Тестовая сцена.unity
-Тестовая сцена.unity.meta
