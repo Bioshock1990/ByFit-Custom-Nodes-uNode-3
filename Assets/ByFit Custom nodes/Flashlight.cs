@@ -1,32 +1,37 @@
+#pragma warning disable
 using System;
 using UnityEngine;
 using MaxyGames.UNode;
 
-namespace MaxyGames.UNode.Nodes {
-    [NodeMenu("ByFit node", "Flashlight", tooltip = "Простая логика фонарика. Включение-выключение на клавишу.", hasFlowInput = true, hasFlowOutput = true, inputs = new Type[] { typeof(Light), typeof(KeyCode) }, outputs = new Type[] { typeof(bool) })]
-    public class Flashlight : IStaticNode {    
-        [Input(typeof(Light), description = "Источник света.")]
-        public static ValuePortDefinition Light;
-        
-        [Input(typeof(KeyCode), description = "Клавиша включения и выключения фонарика.")]
-        public static ValuePortDefinition Key;
-        
-        [Output]
-        public static FlowPortDefinition Exit;
-        
-        [Output(description = "Возвращает включённый фонарик.")]
-        public static bool Turn_on(Light Light, KeyCode Key) {
-            if (Input.GetKeyDown(Key)) {
-                Light.enabled = !Light.enabled;
-            }
-            return Light.enabled;
-        }
+namespace ByFit {
+	[NodeMenu("ByFit Custom nodes", "Flashlight", tooltip = "Toggles flashlight and simulates a flickering effect when blinking is enabled", icon = typeof(ByFit.Flashlight), hasFlowInput = true, inputs = new Type[] { typeof(Light), typeof(KeyCode), typeof(bool), typeof(float) }, outputs = new Type[] { typeof(bool) })]
+	[TypeIcons.IconGuid("d6c07fd3070759d4db216d88f1ab3843")]
+	public class Flashlight : IFlowNode {
+		[Input] public Light Light;
+		[Input] public KeyCode Key = KeyCode.F;
+		[Input] public bool EnableFlicker = false;
+		[Input] public float FlickerSpeed = 0.1f;
 
-        [Input]
-        public static void Enter(Light Light, KeyCode Key) {
-            if (Input.GetKeyDown(Key)) {
-                Light.enabled = !Light.enabled;
-            }
-        }
-    }
+		private bool isOn = false;
+		private float nextFlickerTime = 0;
+
+		private System.Random rand = new System.Random();
+
+		public void Execute(object graph) {
+			if (Input.GetKeyDown(Key) && Light != null) {
+				isOn = !isOn;
+				Light.enabled = isOn;
+				nextFlickerTime = Time.time + FlickerSpeed;
+			}
+
+			// Эффект неисправного фонаря: случайные интенсивности
+			if (EnableFlicker && isOn && Light != null) {
+				if (Time.time >= nextFlickerTime) {
+					Light.intensity = UnityEngine.Random.Range(0.1f, 1.5f); // меняем яркость
+					Light.enabled = UnityEngine.Random.value > 0.2f; // иногда отключаем свет
+					nextFlickerTime = Time.time + UnityEngine.Random.Range(FlickerSpeed * 0.5f, FlickerSpeed * 1.5f);
+				}
+			}
+		}
+	}
 }
