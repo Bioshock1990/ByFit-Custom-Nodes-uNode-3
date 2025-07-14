@@ -4,7 +4,7 @@ using System;
 using MaxyGames.UNode;
 
 namespace ByFit {
-	[NodeMenu("ByFit Custom nodes", "LoadUnixTime", tooltip = "Loads Unix time from PlayerPrefs and calculates elapsed seconds\nЗагружает Unix-время из PlayerPrefs и считает, сколько секунд прошло", icon = typeof(LoadUnixTime), hasFlowInput = true)]
+	[NodeMenu("ByFit Custom nodes/Time", "LoadUnixTime", tooltip = "Loads Unix time from PlayerPrefs and calculates elapsed seconds\nЗагружает Unix-время из PlayerPrefs и считает, сколько секунд прошло", icon = typeof(LoadUnixTime), hasFlowInput = true)]
 	[TypeIcons.IconGuid("b6d14458f79096e4ebf4631134526c4b")]
 	public class LoadUnixTime : IFlowNode {
 		[Output] public long UnixTime;
