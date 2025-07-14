@@ -9,7 +9,7 @@ A set of custom nodes for visual scripting in Unity with the uNode 3 plugin.
 This repository contains source code and test files for a collection of nodes that extend uNode 3’s functionality.
 
 ⚠️ The repository includes experimental and test files.  
-For stable use, please download the ready Unity packages from the releases:  
+⚠️For stable use, please download the ready Unity packages from the releases:  
 👉 [GitHub Releases](https://github.com/Bioshock1990/ByFit-Custom-Nodes-uNode-3/releases)
 
 ---
