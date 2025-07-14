@@ -1,47 +1,47 @@
 # ByFit Custom Nodes for uNode3
 
-A set of extensions for visual scripting in Unity using the uNode 3 plugin.
+Extend your Unity visual scripting with a powerful set of custom nodes for the uNode 3 plugin.
 
 ---
 
-## About the Project
+## About
 
-This repository contains source code and test materials for a collection of custom nodes that extend the capabilities of uNode 3.
+This repository holds the source code and experimental materials for a growing collection of custom nodes designed to boost your uNode 3 workflows.
 
-**Note:** The repository may contain experimental and test files not intended for direct use. For stable usage, we recommend using the ready-made Unity packages from the releases.
+⚠️ **Heads up:** There may be some test files and rough edges here. For a smooth ride, grab the polished Unity packages from the [Releases](https://github.com/your-username/your-repository/releases).
 
 ---
 
 ## Features
 
-- Extends the standard functionality of uNode 3  
-- Convenient nodes for working with flows, events, lists, and time  
-- Flexible tools for creating logic of any complexity  
-- Continuous updates and addition of new nodes
+- Boosts uNode 3’s built-in capabilities  
+- Handy nodes for flow control, event handling, list operations, and time management  
+- Flexible building blocks for creating complex logic, your way  
+- Regular updates — new nodes added frequently
 
-A more detailed catalog and the ability to download individual nodes are available at:  
+Check out the full catalog and download individual nodes at:  
 [https://byfit-custom-node.netlify.app/](https://byfit-custom-node.netlify.app/)
 
 ---
 
 ## Installation
 
-1. Download the ready-made Unity package from the [Releases](https://github.com/your-username/your-repository/releases) section  
-2. In Unity, select **Assets > Import Package > Custom Package...**  
-3. Import the package and start using the nodes in uNode
+1. Download the latest Unity package from [Releases](https://github.com/your-username/your-repository/releases)  
+2. In Unity, go to **Assets > Import Package > Custom Package...**  
+3. Import and start creating with the new nodes in uNode
 
 ---
 
 ## Usage
 
-- Nodes will appear under the **ByFit Custom nodes** category inside uNode  
-- Questions and suggestions can be left in the **Issues** and **Discussions** sections
+- Find your new nodes under the **ByFit Custom nodes** category inside uNode  
+- Got questions or ideas? Jump into **Issues** or **Discussions** — your feedback drives this project!
 
 ---
 
-## Support and Contacts
+## Support & Contact
 
-Thank you for using ByFit Custom Nodes! Feedback and ideas are always welcome.
+Thanks for choosing ByFit Custom Nodes! Keep the feedback coming — it’s what keeps us moving forward.
 
 ---
 
