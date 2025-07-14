@@ -8,7 +8,7 @@
 
 This repo houses the source code and experimental goodies for a collection of custom nodes designed to elevate your visual scripting game.
 
-⚠️ Heads up! Some files here are for testing and tinkering — not all polished. For a battle-ready setup, grab the official Unity packages from the [Releases](https://github.com/your-username/your-repository/releases).
+⚠️ Heads up! Some files here are for testing and tinkering — not all polished. For a battle-ready setup, grab the official Unity packages from the [Releases]([https://github.com/your-username/your-repository/releases](https://github.com/Bioshock1990/ByFit-Custom-Nodes-uNode-3/releases)).
 
 ---
 
