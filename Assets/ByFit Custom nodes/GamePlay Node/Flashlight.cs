@@ -14,21 +14,24 @@ namespace ByFit {
 
 		private bool isOn = false;
 		private float nextFlickerTime = 0;
-
-		private System.Random rand = new System.Random();
+		private float baseIntensity = 1f;
 
 		public void Execute(object graph) {
 			if (Input.GetKeyDown(Key) && Light != null) {
 				isOn = !isOn;
 				Light.enabled = isOn;
+
+				if (isOn) {
+					baseIntensity = Light.intensity + 0.5f;
+				}
+
 				nextFlickerTime = Time.time + FlickerSpeed;
 			}
 
-			// Эффект неисправного фонаря: случайные интенсивности
 			if (EnableFlicker && isOn && Light != null) {
 				if (Time.time >= nextFlickerTime) {
-					Light.intensity = UnityEngine.Random.Range(0.1f, 1.5f); // меняем яркость
-					Light.enabled = UnityEngine.Random.value > 0.2f; // иногда отключаем свет
+					Light.intensity = UnityEngine.Random.Range(0f, baseIntensity);
+					Light.enabled = UnityEngine.Random.value > 0.2f;
 					nextFlickerTime = Time.time + UnityEngine.Random.Range(FlickerSpeed * 0.5f, FlickerSpeed * 1.5f);
 				}
 			}
