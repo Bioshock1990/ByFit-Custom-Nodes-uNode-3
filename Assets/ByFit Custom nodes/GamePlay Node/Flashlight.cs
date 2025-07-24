@@ -4,7 +4,7 @@ using UnityEngine;
 using MaxyGames.UNode;
 
 namespace ByFit {
-	[NodeMenu("ByFit Custom nodes", "Flashlight", tooltip = "Toggles flashlight and simulates a flickering effect when blinking is enabled", icon = typeof(ByFit.Flashlight), hasFlowInput = true, inputs = new Type[] { typeof(Light), typeof(KeyCode), typeof(bool), typeof(float) }, outputs = new Type[] { typeof(bool) })]
+	[NodeMenu("ByFit Custom nodes/GamePlay", "Flashlight", tooltip = "Toggles flashlight and simulates a flickering effect when blinking is enabled", icon = typeof(ByFit.Flashlight), hasFlowInput = true, inputs = new Type[] { typeof(Light), typeof(KeyCode), typeof(bool), typeof(float) }, outputs = new Type[] { typeof(bool) })]
 	[TypeIcons.IconGuid("d6c07fd3070759d4db216d88f1ab3843")]
 	public class Flashlight : IFlowNode {
 		[Input] public Light Light;

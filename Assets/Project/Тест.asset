@@ -796,8 +796,7 @@ MonoBehaviour:
       data:
         _id: flow:0
         _name: 
-        connections:
-        - rid: 5172080161020707491
+        connections: []
     - rid: 5172080139751653996
       type: {class: NodeObject, ns: MaxyGames.UNode, asm: uNode3.Core}
       data:
@@ -3831,8 +3830,7 @@ MonoBehaviour:
       data:
         _id: enter
         _name: 
-        connections:
-        - rid: 5172080161020707491
+        connections: []
     - rid: 5172080161020707463
       type: {class: FlowOutput, ns: MaxyGames.UNode, asm: uNode3.Core}
       data:
@@ -3953,14 +3951,6 @@ MonoBehaviour:
           serializedString: System.Single
           serializedBytes: 
           references: []
-    - rid: 5172080161020707491
-      type: {class: FlowConnection, ns: MaxyGames.UNode, asm: uNode3.Core}
-      data:
-        isProxy: 0
-        input:
-          rid: 5172080161020707462
-        output:
-          rid: 5172080139751653623
     - rid: 5172080161020707492
       type: {class: Variable, ns: MaxyGames.UNode, asm: uNode3.Core}
       data:

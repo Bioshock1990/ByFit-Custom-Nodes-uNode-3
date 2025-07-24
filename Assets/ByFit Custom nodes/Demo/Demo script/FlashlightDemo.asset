@@ -4115,8 +4115,8 @@ MonoBehaviour:
         nodeExpanded: 1
         position:
           serializedVersion: 2
-          x: -36
-          y: 112.53496
+          x: -37.000072
+          y: 100
           width: 181
           height: 68
         _nodeSerializedData:
@@ -4231,8 +4231,8 @@ MonoBehaviour:
         nodeExpanded: 1
         position:
           serializedVersion: 2
-          x: -331
-          y: 107.53497
+          x: -332.0001
+          y: 94.999985
           width: 251
           height: 71
         _nodeSerializedData:
